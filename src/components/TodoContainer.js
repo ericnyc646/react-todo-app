@@ -1,5 +1,6 @@
 import React from "react";
 import TodosList from "./TodosList";
+import InputTodo from "./InputTodo";
 import Header from "./Header"
 
 class TodoContainer extends React.Component {
@@ -37,7 +38,7 @@ class TodoContainer extends React.Component {
             }),
           }));
       };
-      
+
       delTodo = id => {
         this.setState({
           todos: [
@@ -52,6 +53,7 @@ class TodoContainer extends React.Component {
         return (
           <div>
             <Header />
+            <InputTodo />
             <TodosList todos={this.state.todos} 
                 handleChangeProps={this.handleChange}
                 deleteTodoProps={this.delTodo}
